@@ -65,33 +65,33 @@ jobs:
             }
             const timestamp = JSON.parse(JSON.stringify(new Date()));
             const queries = [];
-            const excludedRepoOwners = repo => !['AI-Tournaments', 'ChrisAcrobat'].includes(repo.owner.login);
+            const excludedRepoOwners = repo => !['Algorithmic-Games', 'ChrisAcrobat'].includes(repo.owner.login);
           
-            const response_total = await sendQuery('topic:AI-Tournaments');
+            const response_total = await sendQuery('topic:Algorithmic-Games');
             queries.push({
-              query: 'AI-Tournaments_total',
+              query: 'Algorithmic-Games_total',
               result: response_total.length
             });
             queries.push({
-              query: 'AI-Tournaments_totalExclusive',
+              query: 'Algorithmic-Games_totalExclusive',
               result: response_total.filter(excludedRepoOwners).length
             });
             
-            const response_participants = await sendQuery('topic:AI-Tournaments+topic:AI-Tournaments-Participant');
+            const response_participants = await sendQuery('topic:Algorithmic-Games+topic:Algorithmic-Games-Participant');
             queries.push({
               query: 'participants',
-              result: response_participants.filter(repo => !repo.topics.includes('ai-tournaments-retired')).length
+              result: response_participants.filter(repo => !repo.topics.includes('Algorithmic-Games-Retired')).length
             });
             queries.push({
               query: 'participantsExclusive',
-              result: response_participants.filter(excludedRepoOwners).filter(repo => !repo.topics.includes('ai-tournaments-retired')).length
+              result: response_participants.filter(excludedRepoOwners).filter(repo => !repo.topics.includes('Algorithmic-Games-Retired')).length
             });
             queries.push({
               query: 'retiredParticipants',
-              result: response_participants.filter(repo => repo.topics.includes('ai-tournaments-retired')).length
+              result: response_participants.filter(repo => repo.topics.includes('Algorithmic-Games-Retired')).length
             });
 
-            const response_arenas = await sendQuery('topic:AI-Tournaments+topic:AI-Tournaments-Arena-v1');
+            const response_arenas = await sendQuery('topic:Algorithmic-Games+topic:Algorithmic-Games-Arena-v1');
             queries.push({
               query: 'arenas',
               result: response_arenas.length
@@ -101,7 +101,7 @@ jobs:
               result: response_arenas.filter(excludedRepoOwners).length
             });
             
-            const response_replays = await sendQuery('topic:AI-Tournaments+topic:AI-Tournaments-Replay');
+            const response_replays = await sendQuery('topic:Algorithmic-Games+topic:Algorithmic-Games-Replay');
             queries.push({
               query: 'replays',
               result: response_replays.length
@@ -111,7 +111,7 @@ jobs:
               result: response_replays.filter(excludedRepoOwners).length
             });
             
-            const response_interfaces = await sendQuery('topic:AI-Tournaments-Interface');
+            const response_interfaces = await sendQuery('topic:Algorithmic-Games-Interface');
             queries.push({
               query: 'interfaces',
               result: response_interfaces.length
@@ -158,7 +158,7 @@ jobs:
             }
             const timestamp = JSON.parse(JSON.stringify(new Date()));
             const queries = [];
-            const response_stars = await sendQuery('user:AI-Tournaments');
+            const response_stars = await sendQuery('user:Algorithmic-Games');
             let totalStars = 0;
             response_stars.filter(r => !r.private).forEach(r => {
               queries.push({

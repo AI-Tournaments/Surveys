@@ -1,4 +1,4 @@
-timestamp	AI-Tournaments_total	AI-Tournaments_totalExclusive	arenas	arenasExclusive	interfaces	interfacesExclusive	participants	participantsExclusive	replays	replaysExclusive	retiredParticipants	incomplete_results
+timestamp	Algorithmic-Games_total	Algorithmic-Games_totalExclusive	arenas	arenasExclusive	interfaces	interfacesExclusive	participants	participantsExclusive	replays	replaysExclusive	retiredParticipants	incomplete_results
 2022-08-02T00:35:00.000Z	8	0	2	0	3	0	5	0	0	0	0	
 2022-08-03T00:35:40.000Z	9	0	2	0	3	0	5	0	0	0	0	
 2022-08-04T00:34:47.000Z	11	0	2	0	3	0	5	0	2	0	0	
@@ -468,7 +468,7 @@ timestamp	AI-Tournaments_total	AI-Tournaments_totalExclusive	arenas	arenasExclus
 2023-11-11T02:14:23.882Z	9	0	2	0	3	0	5	0	2	0	0	
 2023-11-12T01:22:15.455Z	9	0	2	0	3	0	5	0	2	0	0	
 2023-11-13T01:19:11.027Z	9	0	2	0	3	0	5	0	2	0	0	
-2023-11-14T01:17:32.595Z	9	0	2	0	3	0	5	0	2	0	0	https://api.github.com/search/repositories?q=topic:AI-Tournaments+topic:AI-Tournaments-Replay&page=1
+2023-11-14T01:17:32.595Z	9	0	2	0	3	0	5	0	2	0	0	https://api.github.com/search/repositories?q=topic:Algorithmic-Games+topic:Algorithmic-Games-Replay&page=1
 2023-11-15T01:19:07.245Z	9	0	2	0	3	0	5	0	2	0	0	
 2023-11-16T01:20:04.087Z	9	0	2	0	3	0	5	0	2	0	0	
 2023-11-17T01:19:48.436Z	9	0	2	0	3	0	5	0	2	0	0	

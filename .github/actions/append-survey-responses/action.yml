@@ -43,7 +43,7 @@ runs:
           const surveys = getPreviousSurvey(filepath+'.json');
           surveys.push(data);
           surveys.sort((a,b) => a.timestamp.localeCompare(b.timestamp));
-          fs.writeFileSync(filepath+'.json', JSON.stringify(surveys), 'utf-8');
+          fs.writeFileSync(filepath+'.json', JSON.stringify(surveys, null, '\t'), 'utf-8');
           const tsvHeaders = ['timestamp'];
           const tsv = [tsvHeaders];
           surveys.forEach(survey => {
